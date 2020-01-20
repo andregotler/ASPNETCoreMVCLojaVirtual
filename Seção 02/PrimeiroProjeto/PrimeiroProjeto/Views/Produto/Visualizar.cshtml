@@ -1,0 +1,15 @@
+﻿@model PrimeiroProjeto.Models.Produto
+
+@{ 
+    string nome = "André Gotler";
+}
+
+Dono: @nome
+<br/>
+<h2>Produto</h2>
+<b>Codigo:</b>@Model.Id
+<b>Nome:</b>@Model.Nome
+<b>Descrição:</b>@Model.Descricao
+<b>Valor:</b>@Model.Valor
+
+Todos os direitos reservados &copy; @DateTime.Now.Year

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\source\\repos\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\Programação\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
       "projectName": "PrimeiroProjeto",
-      "projectPath": "C:\\Users\\andre\\source\\repos\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
+      "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\Programação\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\source\\repos\\PrimeiroProjeto\\PrimeiroProjeto\\obj\\",
+      "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\Programação\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",

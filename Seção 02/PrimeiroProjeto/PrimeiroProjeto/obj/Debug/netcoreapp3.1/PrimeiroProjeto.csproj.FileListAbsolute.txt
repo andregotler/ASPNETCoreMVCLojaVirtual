@@ -33,3 +33,32 @@ C:\Users\andre\source\repos\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp
 C:\Users\andre\source\repos\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.dll
 C:\Users\andre\source\repos\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.pdb
 C:\Users\andre\source\repos\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.csproj.CopyComplete
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\PrimeiroProjeto.exe
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\PrimeiroProjeto.deps.json
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\PrimeiroProjeto.runtimeconfig.json
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\PrimeiroProjeto.runtimeconfig.dev.json
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\PrimeiroProjeto.dll
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\PrimeiroProjeto.pdb
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\PrimeiroProjeto.Views.dll
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.csprojAssemblyReference.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\staticwebassets\PrimeiroProjeto.StaticWebAssets.Manifest.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\staticwebassets\PrimeiroProjeto.StaticWebAssets.xml
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.RazorTargetAssemblyInfo.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.dll
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.pdb
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.csproj.CopyComplete
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\netcoreapp3.1\PrimeiroProjeto.Views.pdb
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.RazorAssemblyInfo.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.RazorAssemblyInfo.cs
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.TagHelpers.input.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.TagHelpers.output.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.RazorCoreGenerate.cache
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Views\Produto\Visualizar.cshtml.g.cs
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.RazorTargetAssemblyInfo.cs
+C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.Views.pdb
