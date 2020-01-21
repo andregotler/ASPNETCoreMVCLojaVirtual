@@ -22,7 +22,7 @@ namespace PrimeiroProjeto.Controllers
             string email = HttpContext.Request.Form["email"];
             string texto = HttpContext.Request.Form["texto"];
 
-            return new ContentResult() { Content = string.Format ("Dados recebidos com sucesso!</br> Nome: {0} </br> E-mail: {1} Texto: {2}", nome, email, texto), ContentType = "text/html"};
+            return new ContentResult() { Content = string.Format ($"Dados recebidos com sucesso!</br> Nome: {nome} </br> E-mail: {email} </br> Texto: {texto}"), ContentType = "text/html"};
         }
         public IActionResult Login()
         {
