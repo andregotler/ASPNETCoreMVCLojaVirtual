@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PrimeiroProjeto.Libranes.Email;
+using PrimeiroProjeto.Models;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace PrimeiroProjeto.Controllers
 {
@@ -18,11 +22,43 @@ namespace PrimeiroProjeto.Controllers
         }
         public IActionResult ContatoAcao()
         {
-            string nome = HttpContext.Request.Form["nome"];
-            string email = HttpContext.Request.Form["email"];
-            string texto = HttpContext.Request.Form["texto"];
+            try
+            {
+                Contato contato = new Contato();
+                contato.Nome = HttpContext.Request.Form["nome"];
+                contato.Email = HttpContext.Request.Form["email"];
+                contato.Texto = HttpContext.Request.Form["texto"];
 
-            return new ContentResult() { Content = string.Format ($"Dados recebidos com sucesso!</br> Nome: {nome} </br> E-mail: {email} </br> Texto: {texto}"), ContentType = "text/html"};
+                var ListaMensagem = new List<ValidationResult>();
+                var contexto = new ValidationContext(contato);
+                bool isValid = Validator.TryValidateObject(contato, contexto, ListaMensagem, true);
+
+                if (isValid)
+                {
+                    ContatoEmail.EnviarContatoEmail(contato);
+
+                    ViewData["MSG_S"] = "Mensagem de contato enviada com successo!";
+                }
+                else
+                {
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var texto in ListaMensagem)
+                    {
+                        sb.Append(texto.ErrorMessage + "<br/>");
+                    }
+                    ViewData["MSG_E"] = sb.ToString();
+                    ViewData["CONTATO"] = contato;
+                }
+            
+            }
+            catch(Exception )
+            {
+                ViewData["MSG_E"] = "Ops! Tivemos um erro, tente novamente mais tarde!";
+
+                //TODO - implementar log
+            }
+           
+            return View("Contato");
         }
         public IActionResult Login()
         {
@@ -36,7 +72,5 @@ namespace PrimeiroProjeto.Controllers
         {
             return View();
         }
-
-
     }
 }
