@@ -18,7 +18,7 @@ namespace PrimeiroProjeto.DataBase
 
         }
         public DbSet<Cliente> Clientes { get; set; }
-
+        public DbSet<NewsletterEmail> NewletterEmail { get; set; }
 
     }
 }

@@ -28,7 +28,7 @@ namespace PrimeiroProjeto
         {
             services.AddControllersWithViews();
 
-            string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Loja Virtual ;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Loja Virtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));
         }
