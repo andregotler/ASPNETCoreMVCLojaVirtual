@@ -7,14 +7,37 @@ using PrimeiroProjeto.Libranes.Email;
 using PrimeiroProjeto.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using PrimeiroProjeto.DataBase;
 
 namespace PrimeiroProjeto.Controllers
 {
     public class HomeController : Controller
     {
+        private LojaVirtualContext _banco;
+        public HomeController(LojaVirtualContext banco)
+        {
+            _banco = banco;
+        }
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Index([FromForm]NewsletterEmail newsletter)
+        {
+            if (ModelState.IsValid)
+            {
+                _banco.NewletterEmail.Add(newsletter);
+                _banco.SaveChanges();
+
+                TempData["MSG_S"] = "E-mail cadastrado! Agora você receberá promoções especiais no seu e-mail, fique atento as novidades!";
+
+                return RedirectToAction/*<-- redireciona para alguma ação|| Forma para direcionar sem errar -->*/(nameof(Index));
+            }
+            { 
+                return View();
+            }
         }
         public IActionResult Contato()
         {
@@ -72,5 +95,6 @@ namespace PrimeiroProjeto.Controllers
         {
             return View();
         }
+        
     }
 }
