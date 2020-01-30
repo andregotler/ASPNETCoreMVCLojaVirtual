@@ -35,7 +35,7 @@ namespace PrimeiroProjeto.Controllers
 
                 return RedirectToAction/*<-- redireciona para alguma ação|| Forma para direcionar sem errar -->*/(nameof(Index));
             }
-            { 
+            {
                 return View();
             }
         }
@@ -72,15 +72,15 @@ namespace PrimeiroProjeto.Controllers
                     ViewData["MSG_E"] = sb.ToString();
                     ViewData["CONTATO"] = contato;
                 }
-            
+
             }
-            catch(Exception )
+            catch (Exception)
             {
                 ViewData["MSG_E"] = "Ops! Tivemos um erro, tente novamente mais tarde!";
 
                 //TODO - implementar log
             }
-           
+
             return View("Contato");
         }
         public IActionResult Login()
@@ -95,12 +95,22 @@ namespace PrimeiroProjeto.Controllers
         [HttpPost]
         public IActionResult CadastroCliente([FromForm] Cliente cliente)
         {
+            if (ModelState.IsValid)
+            {
+                _banco.Clientes.Add(cliente);
+                _banco.SaveChanges();
+
+                TempData["MSG_S"] = "Cadastro realizado com sucesso!";
+
+                return RedirectToAction(nameof(CadastroCliente));
+            }
+
             return View();
         }
         public IActionResult CarrinhoCompras()
         {
             return View();
         }
-        
+
     }
 }
