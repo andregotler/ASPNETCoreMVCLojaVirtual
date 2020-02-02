@@ -8,15 +8,19 @@ using PrimeiroProjeto.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using PrimeiroProjeto.DataBase;
+using PrimeiroProjeto.Repositories.Contracts;
+using Microsoft.AspNetCore.Http;
 
 namespace PrimeiroProjeto.Controllers
 {
     public class HomeController : Controller
     {
-        private LojaVirtualContext _banco;
-        public HomeController(LojaVirtualContext banco)
+        private IClienteRepository _RepositoryCliente;
+        private INewsletterRepository _RepositoryNewsletter;
+        public HomeController(IClienteRepository repositoryCliente, INewsletterRepository repositorynewsletter)
         {
-            _banco = banco;
+            _RepositoryCliente = repositoryCliente;
+            _RepositoryNewsletter = repositorynewsletter;
         }
         [HttpGet]
         public IActionResult Index()
@@ -28,8 +32,7 @@ namespace PrimeiroProjeto.Controllers
         {
             if (ModelState.IsValid)
             {
-                _banco.NewletterEmail.Add(newsletter);
-                _banco.SaveChanges();
+                _RepositoryNewsletter.Cadastrar(newsletter);
 
                 TempData["MSG_S"] = "E-mail cadastrado! Agora você receberá promoções especiais no seu e-mail, fique atento as novidades!";
 
@@ -83,9 +86,40 @@ namespace PrimeiroProjeto.Controllers
 
             return View("Contato");
         }
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Login([FromForm]Cliente cliente)
+        {
+            if (cliente.Email == "dedezinhogotler@gmail.com" && cliente.Senha == "1234")
+            {
+                HttpContext.Session.Set("ID", new byte[] { 52 });
+                HttpContext.Session.SetString("Email", cliente.Email);
+                HttpContext.Session.SetInt32("Idade", 12);
+
+                return new ContentResult() { Content = "Logado!" };
+
+            }
+            else
+            {
+                return new ContentResult() { Content = "Não Logado!" };
+            }
+        }
+        [HttpGet]
+        public IActionResult Painel()
+        {
+            byte[] UsuarioID;
+            if (HttpContext.Session.TryGetValue("ID", out UsuarioID))
+            {
+                return new ContentResult() { Content = "Usuário " + UsuarioID[0] + ", Logado!" };
+            }
+            else
+            {
+                return new ContentResult() { Content = "Acesso negado" };
+            }
         }
         [HttpGet]
         public IActionResult CadastroCliente()
@@ -97,8 +131,7 @@ namespace PrimeiroProjeto.Controllers
         {
             if (ModelState.IsValid)
             {
-                _banco.Clientes.Add(cliente);
-                _banco.SaveChanges();
+                _RepositoryCliente.Cadastrar(cliente);
 
                 TempData["MSG_S"] = "Cadastro realizado com sucesso!";
 

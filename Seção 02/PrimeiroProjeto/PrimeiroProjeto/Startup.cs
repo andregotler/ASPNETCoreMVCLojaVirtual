@@ -11,6 +11,9 @@ using Microsoft.Extensions.Hosting;
 using PrimeiroProjeto.DataBase;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
+using PrimeiroProjeto.Repositories.Contracts;
+using PrimeiroProjeto.Repositories;
+using PrimeiroProjeto.Libraries.Sessao;
 
 namespace PrimeiroProjeto
 {
@@ -23,11 +26,24 @@ namespace PrimeiroProjeto
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
+            //Padrão Repository  
+            services.AddScoped<INewsletterRepository, NewsletterRepository>();
+            services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddHttpContextAccessor();
             services.AddControllersWithViews();
-
+            
+            /*
+             *Session - Configuração
+             */
+            services.AddMemoryCache(); //Guardar os dados  na memoria
+            services.AddSession(options =>
+            {
+                
+            });
+            services.AddScoped<Sessao>();
             string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Loja Virtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));
@@ -51,6 +67,8 @@ namespace PrimeiroProjeto
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthorization();
+            app.UseCookiePolicy();
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
