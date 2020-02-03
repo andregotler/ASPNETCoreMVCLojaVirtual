@@ -14,6 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using PrimeiroProjeto.Repositories.Contracts;
 using PrimeiroProjeto.Repositories;
 using PrimeiroProjeto.Libraries.Sessao;
+using PrimeiroProjeto.Models;
+using PrimeiroProjeto.Libraries.Login;
 
 namespace PrimeiroProjeto
 {
@@ -44,6 +46,7 @@ namespace PrimeiroProjeto
                 
             });
             services.AddScoped<Sessao>();
+            services.AddScoped<LoginCliente>();
             string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Loja Virtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));

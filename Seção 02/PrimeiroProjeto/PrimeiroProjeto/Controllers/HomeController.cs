@@ -10,6 +10,7 @@ using System.Text;
 using PrimeiroProjeto.DataBase;
 using PrimeiroProjeto.Repositories.Contracts;
 using Microsoft.AspNetCore.Http;
+using PrimeiroProjeto.Libraries.Login;
 
 namespace PrimeiroProjeto.Controllers
 {
@@ -17,8 +18,10 @@ namespace PrimeiroProjeto.Controllers
     {
         private IClienteRepository _RepositoryCliente;
         private INewsletterRepository _RepositoryNewsletter;
-        public HomeController(IClienteRepository repositoryCliente, INewsletterRepository repositorynewsletter)
+        private LoginCliente _LoginCliente;
+        public HomeController(IClienteRepository repositoryCliente, INewsletterRepository repositorynewsletter, LoginCliente loginCliente)
         {
+            _LoginCliente = loginCliente;
             _RepositoryCliente = repositoryCliente;
             _RepositoryNewsletter = repositorynewsletter;
         }
@@ -36,7 +39,7 @@ namespace PrimeiroProjeto.Controllers
 
                 TempData["MSG_S"] = "E-mail cadastrado! Agora você receberá promoções especiais no seu e-mail, fique atento as novidades!";
 
-                return RedirectToAction/*<-- redireciona para alguma ação|| Forma para direcionar sem errar -->*/(nameof(Index));
+                return RedirectToAction/*TODO - <-- redireciona para alguma ação|| Forma para direcionar sem errar -->*/(nameof(Index));
             }
             {
                 return View();
@@ -94,30 +97,32 @@ namespace PrimeiroProjeto.Controllers
         [HttpPost]
         public IActionResult Login([FromForm]Cliente cliente)
         {
-            if (cliente.Email == "dedezinhogotler@gmail.com" && cliente.Senha == "1234")
+            Cliente clienteDB = _RepositoryCliente.Login(cliente.Email, cliente.Senha);
+            
+            if (clienteDB != null)
             {
-                HttpContext.Session.Set("ID", new byte[] { 52 });
-                HttpContext.Session.SetString("Email", cliente.Email);
-                HttpContext.Session.SetInt32("Idade", 12);
+                _LoginCliente.Login(clienteDB);
 
-                return new ContentResult() { Content = "Logado!" };
+                return new RedirectResult(Url.Action(nameof(Painel)));
 
             }
             else
             {
-                return new ContentResult() { Content = "Não Logado!" };
+                ViewData["MSG_E"] = "Usuário não encontrado, verifique o e-mail e senha digitado!";
+                return View();
             }
         }
         [HttpGet]
         public IActionResult Painel()
         {
-            byte[] UsuarioID;
-            if (HttpContext.Session.TryGetValue("ID", out UsuarioID))
+            Cliente cliente = _LoginCliente.PegarCliente();
+            if (cliente != null )
             {
-                return new ContentResult() { Content = "Usuário " + UsuarioID[0] + ", Logado!" };
+                return new ContentResult() { Content = "Usuário " + cliente.id + ", Logado!" };
             }
             else
             {
+ 
                 return new ContentResult() { Content = "Acesso negado" };
             }
         }
