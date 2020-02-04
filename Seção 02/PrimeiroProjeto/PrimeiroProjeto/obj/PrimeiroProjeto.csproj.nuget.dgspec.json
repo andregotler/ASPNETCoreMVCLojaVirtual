@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\OneDrive\\Documentos\\Programação\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj": {}
+    "C:\\Users\\André Gotler\\Documents\\GitHub\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\OneDrive\\Documentos\\Programação\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj": {
+    "C:\\Users\\André Gotler\\Documents\\GitHub\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\Programação\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
+        "projectUniqueName": "C:\\Users\\André Gotler\\Documents\\GitHub\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
         "projectName": "PrimeiroProjeto",
-        "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\Programação\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\Programação\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\obj\\",
+        "projectPath": "C:\\Users\\André Gotler\\Documents\\GitHub\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
+        "packagesPath": "C:\\Users\\André Gotler\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\André Gotler\\Documents\\GitHub\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\André Gotler\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

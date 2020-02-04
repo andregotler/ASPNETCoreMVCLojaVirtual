@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PrimeiroProjeto.Repositories.Contracts
 {
-    interface IColaboradorRepository
+    public interface IColaboradorRepository
     {
         Colaborador Login(String Email, String Senha);
         void Cadastrar(Colaborador colaborador);
