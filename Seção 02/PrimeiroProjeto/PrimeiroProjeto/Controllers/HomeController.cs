@@ -11,6 +11,7 @@ using PrimeiroProjeto.DataBase;
 using PrimeiroProjeto.Repositories.Contracts;
 using Microsoft.AspNetCore.Http;
 using PrimeiroProjeto.Libraries.Login;
+using PrimeiroProjeto.Libraries.Filtro;
 
 namespace PrimeiroProjeto.Controllers
 {
@@ -113,18 +114,10 @@ namespace PrimeiroProjeto.Controllers
             }
         }
         [HttpGet]
+        [ClienteAutorizacao]
         public IActionResult Painel()
         {
-            Cliente cliente = _LoginCliente.PegarCliente();
-            if (cliente != null )
-            {
-                return new ContentResult() { Content = "Usuário " + cliente.id + ", Logado!" };
-            }
-            else
-            {
- 
-                return new ContentResult() { Content = "Acesso negado" };
-            }
+            return new ContentResult() { Content = "Este é o Painel do Cliente!" };
         }
         [HttpGet]
         public IActionResult CadastroCliente()

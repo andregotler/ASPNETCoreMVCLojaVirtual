@@ -34,6 +34,7 @@ namespace PrimeiroProjeto
             //Padrão Repository  
             services.AddScoped<INewsletterRepository, NewsletterRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddScoped<IColaboradorRepository, ColaboradorRepository>();
             services.AddHttpContextAccessor();
             services.AddControllersWithViews();
             
@@ -47,6 +48,7 @@ namespace PrimeiroProjeto
             });
             services.AddScoped<Sessao>();
             services.AddScoped<LoginCliente>();
+            services.AddScoped<LoginColaborador>();
             string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Loja Virtual;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
             services.AddDbContext<LojaVirtualContext>(options => options.UseSqlServer(connection));
@@ -62,7 +64,6 @@ namespace PrimeiroProjeto
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
@@ -74,6 +75,11 @@ namespace PrimeiroProjeto
             app.UseSession();
             app.UseEndpoints(endpoints =>
             {
+              
+                endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

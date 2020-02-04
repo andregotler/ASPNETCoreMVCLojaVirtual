@@ -66,7 +66,7 @@ namespace PrimeiroProjeto.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("NewletterEmail");
+                    b.ToTable("NewsletterEmail");
                 });
 #pragma warning restore 612, 618
         }

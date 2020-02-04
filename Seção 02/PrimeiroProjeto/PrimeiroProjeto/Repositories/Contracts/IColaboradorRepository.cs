@@ -1,0 +1,19 @@
+﻿using PrimeiroProjeto.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace PrimeiroProjeto.Repositories.Contracts
+{
+    interface IColaboradorRepository
+    {
+        Colaborador Login(String Email, String Senha);
+        void Cadastrar(Colaborador colaborador);
+        void Atualizar(Colaborador colaborador);
+        void Excluir(int Id);
+        //CRUD
+        Colaborador ObterColaborador(int Id);
+        IEnumerable<Colaborador> ObterTodosColaboradores();
+    }
+}

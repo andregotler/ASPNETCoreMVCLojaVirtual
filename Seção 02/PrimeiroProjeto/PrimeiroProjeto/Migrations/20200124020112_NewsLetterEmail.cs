@@ -7,7 +7,7 @@ namespace PrimeiroProjeto.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "NewletterEmail",
+                name: "NewsletterEmail",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -23,7 +23,7 @@ namespace PrimeiroProjeto.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "NewletterEmail");
+                name: "NewsletterEmail");
         }
     }
 }
