@@ -22,7 +22,7 @@ namespace PrimeiroProjeto.Libraries.Login
             string colaboradorJSONString = JsonConvert.SerializeObject(colaborador);
             _sessao.Cadastrar(Key, colaboradorJSONString);
         }
-        public Colaborador PegarCliente()
+        public Colaborador PegarColaborador()
         {
             //Deserializar
             if (_sessao.Existe(Key))

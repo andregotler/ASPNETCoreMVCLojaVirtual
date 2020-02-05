@@ -35,6 +35,7 @@ namespace PrimeiroProjeto
             services.AddScoped<INewsletterRepository, NewsletterRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<IColaboradorRepository, ColaboradorRepository>();
+            services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddHttpContextAccessor();
             services.AddControllersWithViews();
             

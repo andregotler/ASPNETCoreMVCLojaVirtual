@@ -20,6 +20,7 @@ namespace PrimeiroProjeto.DataBase
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<NewsletterEmail> NewsletterEmail { get; set; }
         public DbSet<Colaborador> Colaboradores { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
 
     }
 }

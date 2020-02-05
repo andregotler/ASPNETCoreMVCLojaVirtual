@@ -11,7 +11,7 @@ namespace PrimeiroProjeto.Repositories.Contracts
     {
         private LojaVirtualContext _banco;
 
-        public ClienteRepository(LojaVirtualContext  banco)
+        public ClienteRepository(LojaVirtualContext banco)
         {
             _banco = banco;
         }
@@ -22,7 +22,7 @@ namespace PrimeiroProjeto.Repositories.Contracts
             _banco.SaveChanges();
         }
 
-        public  void Cadastrar(Cliente cliente)
+        public void Cadastrar(Cliente cliente)
         {
             _banco.Clientes.Add(cliente);
             _banco.SaveChanges();
@@ -37,7 +37,7 @@ namespace PrimeiroProjeto.Repositories.Contracts
 
         public Cliente Login(string Email, string Senha)
         {
-           Cliente cliente = _banco.Clientes.Where(m=>m.Email == Email && m.Senha ==Senha).FirstOrDefault();
+            Cliente cliente = _banco.Clientes.Where(m => m.Email == Email && m.Senha == Senha).FirstOrDefault();
             return cliente;
         }
 
