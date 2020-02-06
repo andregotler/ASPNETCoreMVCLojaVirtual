@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PrimeiroProjeto.Libraries.Filtro;
 using PrimeiroProjeto.Models;
 using PrimeiroProjeto.Repositories.Contracts;
 
 namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
+    [Area("Colaborador")]
+    [ColaboradorAutorizacao]
     public class CategoriaController : Controller {
         private ICategoriaRepository _categoriaRepository;
         public CategoriaController(ICategoriaRepository categoriaRepository) {

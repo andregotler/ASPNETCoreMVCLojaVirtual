@@ -10,6 +10,7 @@ using PrimeiroProjeto.Repositories.Contracts;
 namespace PrimeiroProjeto.Areas.Colaborador.Controllers
 {
     [Area("Colaborador")]
+    
     public class HomeController : Controller
     {
         private IColaboradorRepository _repositoryColaborador;
