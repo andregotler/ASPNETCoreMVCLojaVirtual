@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PrimeiroProjeto.Libraries.Lang;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +11,8 @@ namespace PrimeiroProjeto.Models
     public class Categoria
     {
         public int id { get; set; }
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+        [MinLength(4, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E002")]
         public string Nome { get; set; }
         /*
          * Nome:Telefone sem fio
@@ -16,7 +20,9 @@ namespace PrimeiroProjeto.Models
          * URL normal: www.lojavirtual/categoria/5
          * URL Amigavél e com Slug: www.lojavirtual/categoria/informatica {url amigável}
          */
-        public string Slung { get; set; }
+        [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
+        [MinLength(4, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E002")]
+        public string Slug { get; set; }
 
         /*
          * Auto-Relacionamento

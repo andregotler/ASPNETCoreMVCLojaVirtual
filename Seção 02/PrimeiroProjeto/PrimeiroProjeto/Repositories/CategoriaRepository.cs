@@ -1,15 +1,18 @@
-﻿using PrimeiroProjeto.DataBase;
+﻿using Microsoft.EntityFrameworkCore;
+using PrimeiroProjeto.DataBase;
 using PrimeiroProjeto.Models;
 using PrimeiroProjeto.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace PrimeiroProjeto.Repositories
 {
     public class CategoriaRepository : ICategoriaRepository
     {
+        const int _registroPorPagina = 10;
         private LojaVirtualContext _banco;
 
         public CategoriaRepository(LojaVirtualContext banco)
@@ -40,10 +43,9 @@ namespace PrimeiroProjeto.Repositories
             return _banco.Categoria.Find(Id);
         }
 
-        public IEnumerable<Categoria> ObterTodasCategorias()
-        {
-            return _banco.Categoria.ToList();
-
+        public IPagedList<Categoria> ObterTodasCategorias(int? pagina) {
+            int NumeroPagina = pagina ?? 1;
+            return _banco.Categoria.Include(a=>a.CategoriaPai).ToPagedList<Categoria>(NumeroPagina, _registroPorPagina); 
         }
     }
 }
