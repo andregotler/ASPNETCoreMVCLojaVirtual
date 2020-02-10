@@ -129,4 +129,16 @@
   <data name="MSG_E004" xml:space="preserve">
     <value>{0} invalido!</value>
   </data>
+  <data name="MSG_E005" xml:space="preserve">
+    <value>Senhas  não conferem, tente novamente!</value>
+  </data>
+  <data name="MSG_S001" xml:space="preserve">
+    <value>Registro salvo com sucesso!</value>
+  </data>
+  <data name="MSG_S002" xml:space="preserve">
+    <value>Registro excluido com sucesso!</value>
+  </data>
+  <data name="MSG_S003" xml:space="preserve">
+    <value>Senha enviada para e-mail do colaborador com sucesso! </value>
+  </data>
 </root>

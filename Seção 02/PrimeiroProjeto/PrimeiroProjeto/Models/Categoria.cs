@@ -10,7 +10,10 @@ namespace PrimeiroProjeto.Models
 {
     public class Categoria
     {
+        [Display(Name= "Código")]
         public int id { get; set; }
+
+        [Display(Name = " ")]
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
         [MinLength(4, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E002")]
         public string Nome { get; set; }
@@ -20,6 +23,7 @@ namespace PrimeiroProjeto.Models
          * URL normal: www.lojavirtual/categoria/5
          * URL Amigavél e com Slug: www.lojavirtual/categoria/informatica {url amigável}
          */
+        [Display(Name = " ")]
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
         [MinLength(4, ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E002")]
         public string Slug { get; set; }
@@ -32,7 +36,7 @@ namespace PrimeiroProjeto.Models
          * -- 3-Mouse sem fio P:2
          * -- 4-Mouse Gamer P:2
          */
-
+        [Display(Name = "Categoria Pai")]
         public int? CategoriaPaiId { get; set; }
 
         /*

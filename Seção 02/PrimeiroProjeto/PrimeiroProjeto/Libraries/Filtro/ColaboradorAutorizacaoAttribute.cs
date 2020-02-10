@@ -17,7 +17,7 @@ namespace PrimeiroProjeto.Libraries.Filtro
             Models.Colaborador colaborador = _LoginColaborador.PegarColaborador();
             if (colaborador == null)
             {
-                context.Result = new ContentResult() { Content = "Acesso negado" };
+                context.Result =  new RedirectToActionResult("Login", "home", null);
             }
         }
     }

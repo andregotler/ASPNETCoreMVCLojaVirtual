@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using PrimeiroProjeto.DataBase;
 using PrimeiroProjeto.Models;
 using PrimeiroProjeto.Repositories.Contracts;
@@ -12,12 +13,13 @@ namespace PrimeiroProjeto.Repositories
 {
     public class CategoriaRepository : ICategoriaRepository
     {
-        const int _registroPorPagina = 10;
+        private IConfiguration _config;
         private LojaVirtualContext _banco;
 
-        public CategoriaRepository(LojaVirtualContext banco)
+        public CategoriaRepository(LojaVirtualContext banco, IConfiguration configuration)
         {
-            _banco = banco;
+           _banco = banco;
+            _config = configuration;
         }
         public void Atualizar(Categoria categoria)
         {
@@ -44,8 +46,13 @@ namespace PrimeiroProjeto.Repositories
         }
 
         public IPagedList<Categoria> ObterTodasCategorias(int? pagina) {
+            int RegistroPorPagina = _config.GetValue<int>("RegistroPorPagina");
             int NumeroPagina = pagina ?? 1;
-            return _banco.Categoria.Include(a=>a.CategoriaPai).ToPagedList<Categoria>(NumeroPagina, _registroPorPagina); 
+            return _banco.Categoria.Include(a=>a.CategoriaPai).ToPagedList<Categoria>(NumeroPagina, RegistroPorPagina); 
+        }
+
+        public IEnumerable<Categoria> ObterTodasCategorias() {
+            return _banco.Categoria;
         }
     }
 }

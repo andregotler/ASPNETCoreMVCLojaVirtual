@@ -16,6 +16,9 @@ using PrimeiroProjeto.Repositories;
 using PrimeiroProjeto.Libraries.Sessao;
 using PrimeiroProjeto.Models;
 using PrimeiroProjeto.Libraries.Login;
+using System.Net;
+using System.Net.Mail;
+using PrimeiroProjeto.Libranes.Email;
 
 namespace PrimeiroProjeto
 {
@@ -38,7 +41,25 @@ namespace PrimeiroProjeto
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddHttpContextAccessor();
             services.AddControllersWithViews();
+
+
+            /*
+            *SMTP
+            */
+            // SMTP -> Servidor que vai enviar a mensagem.
+            services.AddScoped<SmtpClient>(options => {
+                SmtpClient smtp = new SmtpClient() {
+                    Host = Configuration.GetValue<String>("Email:ServerSMTP"),
+                    Port = Configuration.GetValue<int>("Email:ServerPort"),
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential(Configuration.GetValue<String>("Email:UserName"), Configuration.GetValue<String>("Email:Password")),
+                    EnableSsl = true
+                };
+                return smtp;
+            });
+            services.AddScoped<GerenciarEmail>();
             
+
             /*
              *Session - Configuração
              */

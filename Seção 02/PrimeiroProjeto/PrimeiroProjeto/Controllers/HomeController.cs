@@ -20,11 +20,13 @@ namespace PrimeiroProjeto.Controllers
         private IClienteRepository _RepositoryCliente;
         private INewsletterRepository _RepositoryNewsletter;
         private LoginCliente _LoginCliente;
-        public HomeController(IClienteRepository repositoryCliente, INewsletterRepository repositorynewsletter, LoginCliente loginCliente)
+        private GerenciarEmail _gerenciaremail;
+        public HomeController(IClienteRepository repositoryCliente, INewsletterRepository repositorynewsletter, LoginCliente loginCliente, GerenciarEmail gerenciaremail)
         {
             _LoginCliente = loginCliente;
             _RepositoryCliente = repositoryCliente;
             _RepositoryNewsletter = repositorynewsletter;
+            _gerenciaremail = gerenciaremail;
         }
         [HttpGet]
         public IActionResult Index()
@@ -65,7 +67,7 @@ namespace PrimeiroProjeto.Controllers
 
                 if (isValid)
                 {
-                    ContatoEmail.EnviarContatoEmail(contato);
+                    _gerenciaremail.EnviarContatoEmail(contato);
 
                     ViewData["MSG_S"] = "Mensagem de contato enviada com successo!";
                 }

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using PrimeiroProjeto.Libraries.Filtro;
+using PrimeiroProjeto.Libraries.Lang;
 using PrimeiroProjeto.Models;
 using PrimeiroProjeto.Repositories.Contracts;
 
@@ -23,6 +25,7 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
         }
         [HttpGet]
         public IActionResult Cadastrar() {
+            ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Select(a => new SelectListItem(a.Nome, a.id.ToString()));
             return View();
         }
 
@@ -31,22 +34,37 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             
             if (ModelState.IsValid) {
                 _categoriaRepository.Cadastrar(categoria);
-                TempData["MSG_S"] = "Registro salvo com sucesso!";
+                TempData["MSG_S"] = Mensagem.MSG_S001;
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Select(a => new SelectListItem(a.Nome, a.id.ToString()));
             return View();
         }
         [HttpGet]
         public IActionResult Atualizar(int id) {
-            return View();
+            var categoria = _categoriaRepository.ObterCategoria(id);
+            ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Where(a=>a.id !=id).Select(a => new SelectListItem(a.Nome, a.id.ToString()));
+            return View(categoria);
         }
         [HttpPost]
-        IActionResult Atualizar([FromForm] Categoria categoria) {
+        IActionResult Atualizar([FromForm] Categoria categoria,int id) {
+
+            if (ModelState.IsValid) {
+                _categoriaRepository.Atualizar(categoria);
+
+                TempData["MSG_S"] = Mensagem.MSG_S001;
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Where(a => a.id != id).Select(a => new SelectListItem(a.Nome, a.id.ToString()));
             return View();
         }
         [HttpGet]
         public IActionResult Excluir(int Id) {
-            return View();
+            _categoriaRepository.Excluir(Id);
+            TempData["MSG_S"] = Mensagem.MSG_S002;
+            return RedirectToAction(nameof(Index));
         }
         
         

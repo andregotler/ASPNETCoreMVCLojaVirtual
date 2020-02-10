@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace PrimeiroProjeto.Repositories.Contracts
 {
@@ -14,6 +15,6 @@ namespace PrimeiroProjeto.Repositories.Contracts
         void Excluir(int Id);
         //CRUD
         Colaborador ObterColaborador(int Id);
-        IEnumerable<Colaborador> ObterTodosColaboradores();
+        IPagedList<Colaborador> ObterTodosColaboradores(int? pagina);
     }
 }
