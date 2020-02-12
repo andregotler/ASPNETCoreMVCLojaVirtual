@@ -13,7 +13,7 @@ using X.PagedList;
 
 namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
     [Area("Colaborador")]
-    [ColaboradorAutorizacao]
+    [ColaboradorAutorizacao("G")]
     public class ColaboradorController : Controller {
 
         private GerenciarEmail _gerenciaremail;
@@ -35,10 +35,11 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
         }
         [HttpPost]
         public IActionResult Cadastrar([FromForm]Models.Colaborador colaborador) {
-
+            ModelState.Remove("Senha");
             if (ModelState.IsValid) {
 
                 colaborador.Tipo = "C";
+                colaborador.Senha = KeyGenerator.GetUniqueKey(8);
                 _colaboradorRepository.Cadastrar(colaborador);
                 _gerenciaremail.EnviarSenhaParaColaboradorPorEmail(colaborador);
                 TempData["MSG_S"] = Mensagem.MSG_S003;
@@ -53,7 +54,7 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             Models.Colaborador colaborador = _colaboradorRepository.ObterColaborador(id);
             colaborador.Senha = KeyGenerator.GetUniqueKey(8);
 
-            _colaboradorRepository.Atualizar(colaborador);
+            _colaboradorRepository.AtualizarSenha(colaborador);
 
             _gerenciaremail.EnviarSenhaParaColaboradorPorEmail(colaborador);
 
@@ -68,7 +69,7 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
         }
         [HttpPost]
         public IActionResult Atualizar([FromForm]Models.Colaborador colaborador, int id) {
-
+            ModelState.Remove("Senha");
             if (ModelState.IsValid) {
 
                 _colaboradorRepository.Atualizar(colaborador);

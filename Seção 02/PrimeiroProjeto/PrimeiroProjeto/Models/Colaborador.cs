@@ -1,4 +1,5 @@
 ﻿using PrimeiroProjeto.Libraries.Lang;
+using PrimeiroProjeto.Libraries.Validacao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -20,6 +21,7 @@ namespace PrimeiroProjeto.Models
         [Display(Name = "Email")]
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]
         [EmailAddress(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E004")]
+        [EmailUnicoColaborador]
         public string Email { get; set; }
         [Display(Name = "Senha")]
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_E001")]

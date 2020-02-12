@@ -21,10 +21,10 @@ namespace PrimeiroProjeto.Libranes.Email
         {
 
             string corpoMensagem = string.Format($"<h2>Contato - Loja Virtual </h2>" +
-                $"<b>Nome: {contato.Nome}</b> </br>"+
-                $"<b>E-mail: {contato.Email}</b></br>"+
-                $"<b>Texto: {contato.Texto}</b></br>"+
-                "</br> E-mail enviado automaticamente do site LojaVirtual."
+                $"<b>Nome: </b>{contato.Nome} </br>"+
+                $"<b>E-mail: </b>{contato.Email}</br>"+
+                $"<b>Texto: </b>{contato.Texto}</br>" +
+                "s</br> E-mail enviado automaticamente do site LojaVirtual."
                 );
             
             
@@ -33,7 +33,7 @@ namespace PrimeiroProjeto.Libranes.Email
             MailMessage mensagem = new MailMessage();
             mensagem.From = new MailAddress(_configuration.GetValue<string>("Email:UserName"));
             mensagem.To.Add(contato.Email);
-            mensagem.Subject = "Contato - Loja Virtual - E-mail" + contato.Email;
+            mensagem.Subject = "Contato - Loja Virtual - E-mail " + contato.Email;
             mensagem.Body = corpoMensagem;
             mensagem.IsBodyHtml = true;
            _smtp.Send(mensagem);

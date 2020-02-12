@@ -47,7 +47,7 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             return View(categoria);
         }
         [HttpPost]
-        IActionResult Atualizar([FromForm] Categoria categoria,int id) {
+        IActionResult Atualizar([FromForm] Categoria categoria, int id) {
 
             if (ModelState.IsValid) {
                 _categoriaRepository.Atualizar(categoria);

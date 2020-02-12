@@ -12,9 +12,11 @@ namespace PrimeiroProjeto.Repositories.Contracts
         Colaborador Login(String Email, String Senha);
         void Cadastrar(Colaborador colaborador);
         void Atualizar(Colaborador colaborador);
+        void AtualizarSenha(Colaborador colaborador);
         void Excluir(int Id);
         //CRUD
         Colaborador ObterColaborador(int Id);
         IPagedList<Colaborador> ObterTodosColaboradores(int? pagina);
+        List<Colaborador> ObterTodosColaboradorPorEmail(string email);
     }
 }
