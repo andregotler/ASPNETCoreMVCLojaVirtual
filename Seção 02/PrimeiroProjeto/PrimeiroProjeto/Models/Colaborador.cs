@@ -35,9 +35,7 @@ namespace PrimeiroProjeto.Models
         public string ConfirmacaoSenha { get; set; }
 
         /*
-         * TIPO
-         * - C=Comum
-         * - G=Gerente
+         * TIPO = ColaboradorTipoConstant
          */
         
         public string Tipo { get; set; }

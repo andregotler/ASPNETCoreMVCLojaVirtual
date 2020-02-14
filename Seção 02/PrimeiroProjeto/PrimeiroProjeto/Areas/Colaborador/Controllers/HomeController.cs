@@ -45,7 +45,9 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers
                 return View();
             }
         }
+
         [ColaboradorAutorizacao]
+        [ValidateHttpReferer]
         public IActionResult Logout()
         {
             _LoginColaborador.Logout();

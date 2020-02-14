@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using PrimeiroProjeto.DataBase;
 using PrimeiroProjeto.Models;
+using PrimeiroProjeto.Models.Constante;
 using PrimeiroProjeto.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
@@ -60,7 +61,7 @@ namespace PrimeiroProjeto.Repositories {
         public IPagedList<Colaborador> ObterTodosColaboradores(int? pagina) {
             int RegistroPorPagina = _config.GetValue<int>("RegistroPorPagina");
             int NumeroPagina = pagina ?? 1;
-            return _banco.Colaboradores.Where(a => a.Tipo != "G").ToPagedList<Colaborador>(NumeroPagina, RegistroPorPagina);
+            return _banco.Colaboradores.Where(a => a.Tipo != ColaboradorTipoConstant.Gerente).ToPagedList<Colaborador>(NumeroPagina, RegistroPorPagina);
         }
     }
 }

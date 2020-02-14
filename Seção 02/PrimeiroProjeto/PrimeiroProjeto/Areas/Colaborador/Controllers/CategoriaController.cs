@@ -61,6 +61,7 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             return View();
         }
         [HttpGet]
+        [ValidateHttpReferer]
         public IActionResult Excluir(int Id) {
             _categoriaRepository.Excluir(Id);
             TempData["MSG_S"] = Mensagem.MSG_S002;

@@ -19,6 +19,7 @@ using PrimeiroProjeto.Libraries.Login;
 using System.Net;
 using System.Net.Mail;
 using PrimeiroProjeto.Libranes.Email;
+using PrimeiroProjeto.Libraries.Middieware;
 
 namespace PrimeiroProjeto
 {
@@ -95,6 +96,7 @@ namespace PrimeiroProjeto
             app.UseAuthorization();
             app.UseCookiePolicy();
             app.UseSession();
+            app.UseMiddleware<ValidateAntiForgeryTokenMiddleware>();
             app.UseEndpoints(endpoints =>
             {
               

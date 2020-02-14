@@ -8,12 +8,13 @@ using PrimeiroProjeto.Libranes.Email;
 using PrimeiroProjeto.Libraries.Filtro;
 using PrimeiroProjeto.Libraries.Lang;
 using PrimeiroProjeto.Libraries.Texto;
+using PrimeiroProjeto.Models.Constante;
 using PrimeiroProjeto.Repositories.Contracts;
 using X.PagedList;
 
 namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
     [Area("Colaborador")]
-    [ColaboradorAutorizacao("G")]
+    [ColaboradorAutorizacao(ColaboradorTipoConstant.Gerente)]
     public class ColaboradorController : Controller {
 
         private GerenciarEmail _gerenciaremail;
@@ -38,7 +39,7 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             ModelState.Remove("Senha");
             if (ModelState.IsValid) {
 
-                colaborador.Tipo = "C";
+                colaborador.Tipo = ColaboradorTipoConstant.Comum;
                 colaborador.Senha = KeyGenerator.GetUniqueKey(8);
                 _colaboradorRepository.Cadastrar(colaborador);
                 _gerenciaremail.EnviarSenhaParaColaboradorPorEmail(colaborador);
@@ -50,6 +51,7 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             return View();
         }
         [HttpGet]
+        [ValidateHttpReferer]
         public IActionResult GerarSenha(int id) {
             Models.Colaborador colaborador = _colaboradorRepository.ObterColaborador(id);
             colaborador.Senha = KeyGenerator.GetUniqueKey(8);
@@ -61,7 +63,6 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             TempData["MSG_S"] = Mensagem.MSG_S003;
             return RedirectToAction(nameof(Index));
         }
-
         [HttpGet]
         public IActionResult Atualizar(int id) {
             Models.Colaborador colaborador = _colaboradorRepository.ObterColaborador(id);
@@ -81,6 +82,7 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             return View();
         }
         [HttpGet]
+        [ValidateHttpReferer]
         public IActionResult Excluir(int Id) {
 
             _colaboradorRepository.Excluir(Id);
