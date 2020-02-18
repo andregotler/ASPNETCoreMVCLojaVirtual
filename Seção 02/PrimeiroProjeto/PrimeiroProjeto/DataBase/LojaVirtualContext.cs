@@ -10,8 +10,8 @@ namespace PrimeiroProjeto.DataBase
     public class LojaVirtualContext: DbContext
     {
         /*
-         * EF COre - ORM
-         * ORM -> Biblioteca mapear objetos para banco de Dados Relacionais
+         * EF Core - ORM
+         * ORM -> Biblioteca que mapeia objetos para banco de Dados Relacionais
          */
         public LojaVirtualContext(DbContextOptions<LojaVirtualContext> options):base(options)
         {

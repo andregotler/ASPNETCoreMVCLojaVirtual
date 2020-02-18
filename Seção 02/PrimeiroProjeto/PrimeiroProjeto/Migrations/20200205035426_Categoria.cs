@@ -13,7 +13,7 @@ namespace PrimeiroProjeto.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(nullable: true),
-                    Slung = table.Column<string>(nullable: true),
+                    Slug = table.Column<string>(nullable: true),
                     CategoriaPaiId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

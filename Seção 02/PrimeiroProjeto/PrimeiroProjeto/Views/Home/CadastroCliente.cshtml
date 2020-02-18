@@ -17,18 +17,17 @@
                                 <h4 class="card-title mt-2">Cadastro</h4>
                             </header>
                             <article class="card-body">
-                                @if (TempData["MSG_S"] != null)
-                                {
+                                @if (TempData["MSG_S"] != null) {
                                     <p class="alert alert-success">@Html.Raw(TempData["MSG_S"])</p>
                                 }
                                 <div class="form-row">
                                     <div class="col form-group">
-                                        <label asp-for="Nome">Nome</label>
+                                        <label asp-for="Nome"></label>
                                         <input type="text" asp-for="Nome" class="form-control" placeholder="">
                                         <span asp-validation-for="Nome"></span>
                                     </div>
                                     <div class="col form-group">
-                                        <label asp-for="Nascimento">Nascimento</label>
+                                        <label asp-for="Nascimento"></label>
                                         <input id="date" type="date" asp-for="Nascimento" class="form-control" placeholder="">
                                         <span asp-validation-for="Nascimento"></span>
                                     </div>
@@ -36,39 +35,44 @@
 
                                 <div class="form-group">
                                     <label class="form-check form-check-inline">
-                                        <input class="form-check-input"  type="radio" asp-for="Sexo" value="M">
+                                        <input class="form-check-input" type="radio" asp-for="Sexo" value="M">
                                         <span class="form-check-label"> Masculino </span>
                                     </label>
                                     <label class="form-check form-check-inline">
-                                        <input class="form-check-input"  type="radio" asp-for="Sexo" value="F">
+                                        <input class="form-check-input" type="radio" asp-for="Sexo" value="F">
                                         <span class="form-check-label"> Feminino</span>
                                     </label>
                                     <span asp-validation-for="Sexo"></span>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        
-                                        <label asp-for="Telefone">Telefone</label>
+
+                                        <label asp-for="Telefone"></label>
                                         <input type="text" asp-for="Telefone" class="form-control">
-                                    <span asp-validation-for="Telefone"></span>
+                                        <span asp-validation-for="Telefone"></span>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label asp-for="CPF">CPF</label>
+                                        <label asp-for="CPF"></label>
                                         <input type="text" asp-for="CPF" class="form-control">
                                         <span asp-validation-for="CPF"></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Email">Email</label>
+                                    <label asp-for="Email"></label>
                                     <input type="email" asp-for="Email" class="form-control" placeholder="">
                                     <span asp-validation-for="Email"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Senha">senha</label>
+                                    <label asp-for="Senha"></label>
                                     <input class="form-control" asp-for="Senha" type="password">
                                     <span asp-validation-for="Senha"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ConfirmacaoSenha"></label>
+                                    <input class="form-control" asp-for="ConfirmacaoSenha" type="password">
+                                    <span asp-validation-for="ConfirmacaoSenha"></span>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-block"> Cadastrar </button>

@@ -16,7 +16,7 @@ namespace PrimeiroProjeto.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_NewletterEmail", x => x.Id);
+                    table.PrimaryKey("PK_NewsletterEmail", x => x.Id);
                 });
         }
 

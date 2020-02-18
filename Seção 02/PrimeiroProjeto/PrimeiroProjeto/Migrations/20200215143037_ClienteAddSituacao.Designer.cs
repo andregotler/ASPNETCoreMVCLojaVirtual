@@ -10,8 +10,8 @@ using PrimeiroProjeto.DataBase;
 namespace PrimeiroProjeto.Migrations
 {
     [DbContext(typeof(LojaVirtualContext))]
-    [Migration("20200205035426_Categoria")]
-    partial class Categoria
+    [Migration("20200215143037_ClienteAddSituacao")]
+    partial class ClienteAddSituacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,9 +32,11 @@ namespace PrimeiroProjeto.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Slug")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
@@ -74,6 +76,9 @@ namespace PrimeiroProjeto.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Situacao")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Telefone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -91,12 +96,15 @@ namespace PrimeiroProjeto.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Senha")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Tipo")
