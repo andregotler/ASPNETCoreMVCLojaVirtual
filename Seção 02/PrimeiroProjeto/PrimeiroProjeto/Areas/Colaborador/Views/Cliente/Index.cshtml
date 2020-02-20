@@ -1,9 +1,26 @@
 ﻿@model X.PagedList.IPagedList<PrimeiroProjeto.Models.Cliente>
 @{
     ViewData["Title"] = "Index";
+    var pesquisa = Context.Request.Query["pesquisa"];
 }
 
 <h1>Cliente</h1>
+
+<br />
+<br />
+<!-- 
+    Formulário 
+    --QueryString: Colaborador/Cliente/Index?pesquisa={palavraDigitada}&pagina=3
+
+    -->
+<form method="get">
+
+    <div class="form-group">
+        <label for="pesquisa"></label>
+        <input type="text" name="pesquisa" id="pesquisa" value="@pesquisa" class="form-control" placeholder="Digite o nome ou e-mail do Cliente">
+    </div>
+    <button type="submit" class="btn btn-primary">Ok</button> 
+</form>
 
 <br />
 <br />
@@ -11,6 +28,7 @@
 @if (TempData["MSG_S"] != null) {
     <p class="alert alert-success">@TempData["MSG_S"]</p>
 }
+
 
 @if (Model.Count > 0) {
 
@@ -44,7 +62,7 @@
         </table>
     </div>
 
-    @Html.PagedListPager((IPagedList)Model, pagina => Url.Action("Index", new { pagina }))
+    @Html.PagedListPager((IPagedList)Model, pagina => Url.Action("Index", new { pagina = pagina, pesquisa = pesquisa}))
 
 }
 else {
