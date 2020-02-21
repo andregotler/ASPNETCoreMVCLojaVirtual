@@ -22,5 +22,7 @@ namespace PrimeiroProjeto.DataBase
         public DbSet<Colaborador> Colaboradores { get; set; }
         public DbSet<Categoria> Categoria { get; set; }
 
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Imagem> Imagens { get; set; }
     }
 }

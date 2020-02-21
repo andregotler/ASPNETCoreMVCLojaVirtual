@@ -26,10 +26,11 @@ namespace PrimeiroProjeto.Models
 
         //Programação orientada a objetos
         [ForeignKey("CategoriaId")]
-        public Categoria Categoria { get; set; }
+        public virtual Categoria Categoria { get; set; }
 
         /*EF - ORM - Biblioteca unir - Banco de dados e POO. (ORM - Mapeamento de Objetos <-> Relacionamento)
          * Fluent API - Attributes*/
 
+        public virtual ICollection<Imagem> Imagens { get; set; }
     }
 }
