@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using PrimeiroProjeto.DataBase;
 using PrimeiroProjeto.Models;
 using System;
@@ -37,7 +38,7 @@ namespace PrimeiroProjeto.Repositories {
 
         public Produto ObterProduto(int Id) {
 
-            return _banco.Produtos.Find(Id);
+            return _banco.Produtos.Include(a=> a.Imagens).Where(a=> a.Id == Id).FirstOrDefault();
         }
 
         public IPagedList<Produto> ObterTodosProdutos(int? pagina, string pesquisa) {
@@ -53,7 +54,7 @@ namespace PrimeiroProjeto.Repositories {
                 bancoProduto = bancoProduto.Where(a => a.Nome.Contains(pesquisa.Trim()));
             }
 
-            return _banco.Produtos.ToPagedList<Produto>(NumeroPagina, RegistroPorPagina);
+            return _banco.Produtos.Include(a => a.Imagens).ToPagedList<Produto>(NumeroPagina, RegistroPorPagina);
         }
     }
 }
