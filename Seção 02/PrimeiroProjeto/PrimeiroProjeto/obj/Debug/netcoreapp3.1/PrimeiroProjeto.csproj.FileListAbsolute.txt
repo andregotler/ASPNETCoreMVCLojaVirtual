@@ -356,3 +356,5 @@ C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\Prim
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.csproj.CopyComplete
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.dll
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\PrimeiroProjeto.pdb
+C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Produto\Index.cshtml.g.cs
+C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Produto\Cadastrar.cshtml.g.cs
