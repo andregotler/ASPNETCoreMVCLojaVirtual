@@ -1,14 +1,13 @@
 ﻿@model PrimeiroProjeto.Models.Produto
 @{
-    ViewData["Title"] = "Cadastrar";
+    ViewData["Title"] = "Atualizar";
 }
 
-<h1>Cadastrar</h1>
+<h1>Atualizar</h1>
 
 <form method="post">
     <div class="row">
         <div class="form-group col-md-6">
-            <label asp-for="CategoriaId"> </label>
             <label asp-for="CategoriaId"> </label>
             <select asp-for="CategoriaId" class="form-control" asp-items="@ViewBag.Categorias">
                 <option value="">Selecione</option>
@@ -53,7 +52,7 @@
         <div class="form-group col-md-3">
             <label asp-for="Peso"></label>
             <div class="input-group mb-2">
-                <input asp-for="Peso"  class="form-control" placeholder="Digite o peso do produto" />
+                <input asp-for="Peso" class="form-control" placeholder="Digite o peso do produto" />
                 <div class="input-group-prepend">
                     <div class="input-group-text">Kg</div>
                 </div>
@@ -73,7 +72,7 @@
         <div class="form-group col-md-3">
             <label asp-for="Altura"></label>
             <div class="input-group mb-2">
-                <input asp-for="Altura" type="number"  class="form-control" placeholder="Digite a altura do produto" />
+                <input asp-for="Altura" type="number" class="form-control" placeholder="Digite a altura do produto" />
                 <div class="input-group-prepend">
                     <div class="input-group-text">cm</div>
                 </div>
@@ -83,7 +82,7 @@
         <div class="form-group col-md-3">
             <label asp-for="Comprimento"></label>
             <div class="input-group mb-2">
-                <input asp-for="Comprimento" type="number"  class="form-control" placeholder="Digite a quantidade do produto" />
+                <input asp-for="Comprimento" type="number" class="form-control" placeholder="Digite a quantidade do produto" />
                 <div class="input-group-prepend">
                     <div class="input-group-text">cm</div>
                 </div>
