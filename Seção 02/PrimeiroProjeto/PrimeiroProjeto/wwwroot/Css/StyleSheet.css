@@ -19,3 +19,9 @@
     width: 100%;
 }
 
+.input-file {
+    display: none;
+}
+.img-upload {
+    cursor: pointer;
+}

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PrimeiroProjeto.Libraries.Bug;
 
 namespace PrimeiroProjeto
 {
@@ -13,6 +14,8 @@ namespace PrimeiroProjeto
     {
         public static void Main(string[] args)
         {
+
+            CurrentDirectoryHelpers.SetCurrentDirectory();
             CreateHostBuilder(args).Build().Run();
         }
 

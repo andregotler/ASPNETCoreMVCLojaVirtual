@@ -38,7 +38,10 @@
 
   <ItemGroup>
     <Folder Include="Areas\Colaborador\Models\" />
+    <Folder Include="wwwroot\Upload\Temp\" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 
 
