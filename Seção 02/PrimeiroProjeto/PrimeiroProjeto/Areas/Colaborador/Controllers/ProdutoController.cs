@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using PrimeiroProjeto.Libraries.Arquivo;
 using PrimeiroProjeto.Libraries.Filtro;
 using PrimeiroProjeto.Libraries.Lang;
 using PrimeiroProjeto.Models;
@@ -37,6 +38,12 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             if(ModelState.IsValid) {
 
                 _produtoRepository.Cadastrar(produto);
+
+                
+               List<string> ListaCaminhoDef = GerenciadorArquivo.MoverImagensProduto(new List<string>(Request.Form["imagem"]), produto.Id.ToString());
+                //TODO - caminhoTemp -> Mover a Imagem para o caminho definitivo
+                //TODO - Salvar o Caminho Definitivo no banco de dados
+
                 TempData["MSG_S"] = Mensagem.MSG_S001;
                 return RedirectToAction(nameof(Index));
 
