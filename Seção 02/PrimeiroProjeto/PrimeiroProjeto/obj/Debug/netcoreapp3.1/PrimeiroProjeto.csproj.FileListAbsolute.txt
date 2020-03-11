@@ -328,9 +328,6 @@ C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\Prim
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Categoria\Cadastrar.cshtml.g.cs
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Categoria\Index.cshtml.g.cs
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Cliente\Index.cshtml.g.cs
-C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Colaborador\Atualizar.cshtml.g.cs
-C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Colaborador\Cadastrar.cshtml.g.cs
-C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Colaborador\Index.cshtml.g.cs
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Home\CadastrarNovaSenha.cshtml.g.cs
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Home\Login.cshtml.g.cs
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Home\Painel.cshtml.g.cs
@@ -362,3 +359,6 @@ C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seçã
 C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Produto\Colaborador\Atualizar.cshtml.g.cs
 C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Produto\Colaborador\Cadastrar.cshtml.g.cs
 C:\Users\andre\OneDrive\Documentos\Programação\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Produto\Colaborador\Index.cshtml.g.cs
+C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Produto\Colaborador\Atualizar.cshtml.g.cs
+C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Produto\Colaborador\Cadastrar.cshtml.g.cs
+C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Produto\Colaborador\Index.cshtml.g.cs
