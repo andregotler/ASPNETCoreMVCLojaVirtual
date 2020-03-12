@@ -18,7 +18,12 @@ namespace PrimeiroProjeto.Repositories {
             _banco = banco;
             _config = configuration;
         }
+        public void CadastrarImagens(List<Imagem> ListaImagens, int ProdutoId) {
 
+            foreach (var imagem in ListaImagens) { 
+                Cadastrar(imagem);
+            }
+        }
         public void Cadastrar(Imagem imagem) {
 
             _banco.Add(imagem);
@@ -38,5 +43,7 @@ namespace PrimeiroProjeto.Repositories {
             }
             _banco.SaveChanges();
         }
+
+       
     }
 }

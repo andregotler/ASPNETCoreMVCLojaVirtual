@@ -17,10 +17,12 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
     public class ProdutoController : Controller {
         private IProdutoRepository _produtoRepository;
         private ICategoriaRepository _categoriaRepository;
+        private IImagemRepository _imagemRepository;
 
-        public ProdutoController(IProdutoRepository produtoRepository, ICategoriaRepository categoriaRepository) {
+        public ProdutoController(IProdutoRepository produtoRepository, ICategoriaRepository categoriaRepository, IImagemRepository imagemRepository) {
             _produtoRepository = produtoRepository;
             _categoriaRepository = categoriaRepository;
+            _imagemRepository = imagemRepository;
         }
 
         public IActionResult Index(int? pagina, string pesquisa) {
@@ -38,12 +40,9 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
             if(ModelState.IsValid) {
 
                 _produtoRepository.Cadastrar(produto);
-
-                
-               List<string> ListaCaminhoDef = GerenciadorArquivo.MoverImagensProduto(new List<string>(Request.Form["imagem"]), produto.Id.ToString());
-                //TODO - caminhoTemp -> Mover a Imagem para o caminho definitivo
-                //TODO - Salvar o Caminho Definitivo no banco de dados
-
+               List<Imagem> ListaImagensDef = GerenciadorArquivo.MoverImagensProduto(new List<string>(Request.Form["imagem"]), produto.Id);
+                _imagemRepository.CadastrarImagens(ListaImagensDef, produto.Id);             
+               
                 TempData["MSG_S"] = Mensagem.MSG_S001;
                 return RedirectToAction(nameof(Index));
 

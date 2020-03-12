@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using PrimeiroProjeto.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,16 +33,16 @@ namespace PrimeiroProjeto.Libraries.Arquivo {
             }
         }
 
-        public static List<string> MoverImagensProduto(List<string> listaCaminhoTemp, string ProdutoId) {
+        public static List<Imagem> MoverImagensProduto(List<string> listaCaminhoTemp, int ProdutoId) {
 
             //Cruia a pasta do produto
-            var CaminhoDefinitivoPastaProduto = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Uploads", ProdutoId);
+            var CaminhoDefinitivoPastaProduto = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Uploads", ProdutoId.ToString());
             if (!Directory.Exists(CaminhoDefinitivoPastaProduto)) {
                 Directory.CreateDirectory(CaminhoDefinitivoPastaProduto);
             }
             //Mover a Imagem da Pasta Temp para a pasta definitiva
 
-            List<string> ListaCaminhoDef = new List<string>();
+            List<Imagem> ListaImagensDef = new List<Imagem>();
             foreach (var CaminhoTemp in listaCaminhoTemp) {
 
                 if (string.IsNullOrEmpty(CaminhoTemp)) {
@@ -49,21 +50,21 @@ namespace PrimeiroProjeto.Libraries.Arquivo {
                     // /upload/temp/mouse-cosair.jpg
                     var NomeArquivo = Path.GetFileName(CaminhoTemp);
                     var CaminhoAbsolutoTemp = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", CaminhoTemp);
-                    var CaminhoAbsolutoDef = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Upload", ProdutoId, NomeArquivo);
+                    var CaminhoAbsolutoDef = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Upload", ProdutoId.ToString(), NomeArquivo);
 
                     if (File.Exists(CaminhoAbsolutoTemp)) {
                         File.Copy(CaminhoAbsolutoTemp, CaminhoAbsolutoDef);
                         if (File.Exists(CaminhoAbsolutoDef)) {
                             File.Delete(CaminhoAbsolutoTemp);
                         }
-                        ListaCaminhoDef.Add(Path.Combine("/Upload", ProdutoId, NomeArquivo).Replace("\\", "/"));
+                        ListaImagensDef.Add(new Imagem() { Caminho = Path.Combine("/Upload", ProdutoId.ToString().ToString(), NomeArquivo).Replace("\\", "/"), ProdutoID = ProdutoId });
                     }
                     else {
                         return null;
                     }
                 }
             }
-            return ListaCaminhoDef;
+            return ListaImagensDef;
         }
     }
 }
