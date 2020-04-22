@@ -36,7 +36,7 @@ namespace PrimeiroProjeto.Libraries.Arquivo {
         public static List<Imagem> MoverImagensProduto(List<string> listaCaminhoTemp, int ProdutoId) {
 
             //Cruia a pasta do produto
-            var CaminhoDefinitivoPastaProduto = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Uploads", ProdutoId.ToString());
+            var CaminhoDefinitivoPastaProduto = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Upload", ProdutoId.ToString());
             if (!Directory.Exists(CaminhoDefinitivoPastaProduto)) {
                 Directory.CreateDirectory(CaminhoDefinitivoPastaProduto);
             }
@@ -45,11 +45,11 @@ namespace PrimeiroProjeto.Libraries.Arquivo {
             List<Imagem> ListaImagensDef = new List<Imagem>();
             foreach (var CaminhoTemp in listaCaminhoTemp) {
 
-                if (string.IsNullOrEmpty(CaminhoTemp)) {
+                if (!string.IsNullOrEmpty(CaminhoTemp)) {
 
                     // /upload/temp/mouse-cosair.jpg
                     var NomeArquivo = Path.GetFileName(CaminhoTemp);
-                    var CaminhoAbsolutoTemp = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", CaminhoTemp);
+                    var CaminhoAbsolutoTemp = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Upload/temp", NomeArquivo);
                     var CaminhoAbsolutoDef = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Upload", ProdutoId.ToString(), NomeArquivo);
 
                     if (File.Exists(CaminhoAbsolutoTemp)) {

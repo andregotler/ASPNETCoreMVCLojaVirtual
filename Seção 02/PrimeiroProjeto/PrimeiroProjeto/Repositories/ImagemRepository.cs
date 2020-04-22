@@ -19,9 +19,10 @@ namespace PrimeiroProjeto.Repositories {
             _config = configuration;
         }
         public void CadastrarImagens(List<Imagem> ListaImagens, int ProdutoId) {
-
-            foreach (var imagem in ListaImagens) { 
-                Cadastrar(imagem);
+            if (ListaImagens != null && ListaImagens.Count > 0) {
+                foreach (var imagem in ListaImagens) {
+                    Cadastrar(imagem);
+                }
             }
         }
         public void Cadastrar(Imagem imagem) {
@@ -38,12 +39,12 @@ namespace PrimeiroProjeto.Repositories {
 
         public void ExcluirImagensDoProduto(int ProdutoID) {
             List<Imagem> imagens = _banco.Imagens.Where(a => a.ProdutoID == ProdutoID).ToList();
-            foreach(Imagem imagem in imagens) {
+            foreach (Imagem imagem in imagens) {
                 _banco.Remove(imagem);
             }
             _banco.SaveChanges();
         }
 
-       
+
     }
 }

@@ -47,9 +47,14 @@ namespace PrimeiroProjeto.Areas.Colaborador.Controllers {
                 return RedirectToAction(nameof(Index));
 
             }
-            ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Select(a => new SelectListItem(a.Nome, a.id.ToString()));
+            else {
 
-            return View();
+                
+                ViewBag.Categorias = _categoriaRepository.ObterTodasCategorias().Select(a => new SelectListItem(a.Nome, a.id.ToString()));
+                produto.Imagens = new List<string>(Request.Form["imagem"]).Where(a =>a.Trim().Length>0).Select(a => new Imagem() { Caminho = a }).ToList();
+                return View(produto);
+            }
+          
         }
         [HttpGet]
         public IActionResult Atualizar(int id) {
