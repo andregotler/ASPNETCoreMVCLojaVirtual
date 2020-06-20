@@ -7,7 +7,7 @@
 <form method="post">
 
     <input type="hidden" asp-for="id" />
-    <!----Asp-For permite carregar as informações altomaticamente -->
+    <!----Asp-For permite carregar as informações automaticamente -->
         <div class="form-group">
             <label asp-for="Nome"></label>
             <input asp-for="Nome" class="form-control" placeholder="Digite o nome da categoria">
@@ -26,5 +26,5 @@
             </select>
             <span asp-validation-for="CategoriaPaiId" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button> <a asp-action="Index" class="btn btn-info">Voltar</a>
+        <button type="submit" class="btn btn-primary">Atualizar</button> <a asp-action="Index" class="btn btn-info">Voltar</a>
 </form>

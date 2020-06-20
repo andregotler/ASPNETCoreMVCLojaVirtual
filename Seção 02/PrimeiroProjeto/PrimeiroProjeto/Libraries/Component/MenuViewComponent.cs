@@ -16,7 +16,7 @@ namespace PrimeiroProjeto.Libraries.Component
         }
         public async Task<IViewComponentResult> InvokeAsync() {
             var ListaCategoria = _categoriaRepository.ObterTodasCategorias().ToList();
-            return View();
+            return View(ListaCategoria);
         }
     }
 }
