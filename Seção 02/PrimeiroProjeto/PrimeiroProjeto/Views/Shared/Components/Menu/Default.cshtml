@@ -19,7 +19,7 @@
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     @{
                         var CategoriasPrincipais = TodasCategorias.Where(a => a.CategoriaPaiId == null).ToList();
-                        ViewData["TodasCategorias"] = TodasCategorias
+                        ViewData["TodasCategorias"] = TodasCategorias;
                     }
                     @foreach (var categoria in CategoriasPrincipais)
                     {
