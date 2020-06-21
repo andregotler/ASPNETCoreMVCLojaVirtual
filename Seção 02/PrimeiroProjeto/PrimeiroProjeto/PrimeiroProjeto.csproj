@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Areas\Colaborador\Views\Categoria\Atualizar.cshtml" />
     <Content Remove="Views\Home\ContatoAcao.cshtml" />
   </ItemGroup>
 
