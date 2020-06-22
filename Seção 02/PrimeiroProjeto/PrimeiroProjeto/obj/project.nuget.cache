@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "at/9uz8HAHJlFzE6SidU4IYxVQdPH9fejJO/jNSx+ZIazHJrbMh+9mcPZfkn16bW7nxUWqjss66BfKePZ1VmcQ==",
+  "dgSpecHash": "x23fyvjOh49SGtG/ZRIAWvvq0IFkpeU0QDsdnKT1KbIlz3QjXgLVIp7HpkHbTAGZm48KN9p/CXFkuMoSJ9APEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\André Gotler\\Documents\\GitHub\\ASPNETCoreMVCLojaVirtual\\Seção 02\\PrimeiroProjeto\\PrimeiroProjeto\\PrimeiroProjeto.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\André Gotler\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512",
+    "C:\\Users\\André Gotler\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\André Gotler\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\André Gotler\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\André Gotler\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
@@ -130,7 +130,7 @@
     "C:\\Users\\André Gotler\\.nuget\\packages\\system.composition.typedparts\\1.0.31\\system.composition.typedparts.1.0.31.nupkg.sha512",
     "C:\\Users\\André Gotler\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\André Gotler\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
-    "C:\\Users\\André Gotler\\.nuget\\packages\\system.data.sqlclient\\4.8.0\\system.data.sqlclient.4.8.0.nupkg.sha512",
+    "C:\\Users\\André Gotler\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
     "C:\\Users\\André Gotler\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\André Gotler\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",
     "C:\\Users\\André Gotler\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",

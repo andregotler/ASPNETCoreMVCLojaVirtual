@@ -19,8 +19,22 @@ using PrimeiroProjeto.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Core;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\Views\_ViewImports.cshtml"
+using X.PagedList;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9fae76d865b127f7527efa851db6b67ec2e7d5fa", @"/Views/Home/Contato.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d2d25e9132e0e267f768743c79ea535a0daffcfe", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"449707f1bf4b30822ee29aa7aef83addab8fb43c", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Contato : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("role", new global::Microsoft.AspNetCore.Html.HtmlString("form"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -150,7 +164,7 @@ using PrimeiroProjeto.Models;
 #line hidden
 #nullable disable
             WriteLiteral("                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fae76d865b127f7527efa851db6b67ec2e7d5fa7933", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fae76d865b127f7527efa851db6b67ec2e7d5fa8404", async() => {
                 WriteLiteral(@"
                                 <div class=""form-group"">
                                     <label for=""nome"">Nome</label>

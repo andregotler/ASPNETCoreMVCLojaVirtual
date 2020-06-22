@@ -19,8 +19,22 @@ using PrimeiroProjeto.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\Views\_ViewImports.cshtml"
+using X.PagedList.Mvc.Core;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\Views\_ViewImports.cshtml"
+using X.PagedList;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1958e28728069347340334922af5ed64ffa80666", @"/Views/Home/CarrinhoCompras.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d2d25e9132e0e267f768743c79ea535a0daffcfe", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"449707f1bf4b30822ee29aa7aef83addab8fb43c", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_CarrinhoCompras : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -98,7 +112,7 @@ using PrimeiroProjeto.Models;
                                     </figure>
                              ");
             WriteLiteral("   </td>\r\n                                <td>\r\n                                    <select class=\"form-control\">\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa806665670", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa806666141", async() => {
                 WriteLiteral("1");
             }
             );
@@ -112,7 +126,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa806666663", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa806667134", async() => {
                 WriteLiteral("2");
             }
             );
@@ -126,7 +140,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa806667656", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa806668127", async() => {
                 WriteLiteral("3");
             }
             );
@@ -140,7 +154,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa806668649", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa806669120", async() => {
                 WriteLiteral("4");
             }
             );
@@ -195,7 +209,7 @@ using PrimeiroProjeto.Models;
                                 <td>
                                     <select class=""form-control"">
                                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066612187", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066612658", async() => {
                 WriteLiteral("1");
             }
             );
@@ -209,7 +223,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066613181", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066613652", async() => {
                 WriteLiteral("2");
             }
             );
@@ -223,7 +237,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066614175", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066614646", async() => {
                 WriteLiteral("3");
             }
             );
@@ -237,7 +251,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066615169", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066615640", async() => {
                 WriteLiteral("4");
             }
             );
@@ -292,7 +306,7 @@ using PrimeiroProjeto.Models;
                                 <td>
                                     <select class=""form-control"">
                                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066618718", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066619189", async() => {
                 WriteLiteral("1");
             }
             );
@@ -306,7 +320,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066619712", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066620183", async() => {
                 WriteLiteral("2");
             }
             );
@@ -320,7 +334,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066620706", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066621177", async() => {
                 WriteLiteral("3");
             }
             );
@@ -334,7 +348,7 @@ using PrimeiroProjeto.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066621700", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1958e28728069347340334922af5ed64ffa8066622171", async() => {
                 WriteLiteral("4");
             }
             );

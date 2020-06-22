@@ -12,6 +12,8 @@ using PrimeiroProjeto.Repositories.Contracts;
 using Microsoft.AspNetCore.Http;
 using PrimeiroProjeto.Libraries.Login;
 using PrimeiroProjeto.Libraries.Filtro;
+using PrimeiroProjeto.Repositories;
+using PrimeiroProjeto.Models.ViewModels;
 
 namespace PrimeiroProjeto.Controllers
 {
@@ -21,20 +23,23 @@ namespace PrimeiroProjeto.Controllers
         private INewsletterRepository _RepositoryNewsletter;
         private LoginCliente _LoginCliente;
         private GerenciarEmail _gerenciaremail;
-        public HomeController(IClienteRepository repositoryCliente, INewsletterRepository repositorynewsletter, LoginCliente loginCliente, GerenciarEmail gerenciaremail)
+        private IProdutoRepository _produtoRepository;
+        public HomeController(IProdutoRepository produtoRepository, IClienteRepository repositoryCliente, INewsletterRepository repositorynewsletter, LoginCliente loginCliente, GerenciarEmail gerenciaremail)
         {
             _LoginCliente = loginCliente;
             _RepositoryCliente = repositoryCliente;
             _RepositoryNewsletter = repositorynewsletter;
             _gerenciaremail = gerenciaremail;
+            _produtoRepository = produtoRepository;
         }
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(int? pagina, string pesquisa, string ordenacao)
         {
-            return View();
+            var viewModel = new IndexViewModel() { lista = _produtoRepository.ObterTodosProdutos(pagina, pesquisa, ordenacao) };
+            return View(viewModel);
         }
         [HttpPost]
-        public IActionResult Index([FromForm]NewsletterEmail newsletter)
+        public IActionResult Index(int? pagina, string pesquisa, string ordenacao, [FromForm] NewsletterEmail newsletter)
         {
             if (ModelState.IsValid)
             {
@@ -44,10 +49,18 @@ namespace PrimeiroProjeto.Controllers
 
                 return RedirectToAction/*TODO - <-- redireciona para alguma ação|| Forma para direcionar sem errar -->*/(nameof(Index));
             }
+            else
             {
-                return View();
+                var viewModel = new IndexViewModel() { lista = _produtoRepository.ObterTodosProdutos(pagina, pesquisa, ordenacao) };
+                return View(viewModel);
             }
         }
+
+        public IActionResult Categoria()
+        {
+            return View();
+        }
+
         public IActionResult Contato()
         {
             return View();
@@ -98,10 +111,10 @@ namespace PrimeiroProjeto.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Login([FromForm]Cliente cliente)
+        public IActionResult Login([FromForm] Cliente cliente)
         {
             Cliente clienteDB = _RepositoryCliente.Login(cliente.Email, cliente.Senha);
-            
+
             if (clienteDB != null)
             {
                 _LoginCliente.Login(clienteDB);

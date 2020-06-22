@@ -354,3 +354,4 @@ C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\Prim
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\Default.cshtml.g.cs
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Menu\_SubMenu.cshtml.g.cs
 C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Areas\Colaborador\Views\Categoria\Atualizar.cshtml.g.cs
+C:\Users\André Gotler\Documents\GitHub\ASPNETCoreMVCLojaVirtual\Seção 02\PrimeiroProjeto\PrimeiroProjeto\obj\Debug\netcoreapp3.1\Razor\Views\Home\Categoria.cshtml.g.cs
